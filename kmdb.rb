@@ -69,6 +69,9 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
+Movie.destroy_all
+Person.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model
 # TODO!
@@ -126,28 +129,27 @@ new_person = Person.new
 new_person.name = "Anne Hathaway"
 new_person.save
 
-director = Person.where({name: "Christopher Nolan"})[0]
-director_id = director.id
+christopher = Person.where({name: "Christopher Nolan"})[0]
 
 new_movie = Movie.new
 new_movie.title = "Batman Begins"
 new_movie.year_released = "2005"
 new_movie.rated = "PG-13"
-new_movie.director_id = director.id
+new_movie.person_id = christopher.id
 new_movie.save
 
 new_movie = Movie.new
 new_movie.title = "The Dark Knight"
 new_movie.year_released = "2008"
 new_movie.rated = "PG-13"
-new_movie.director_id = director.id
+new_movie.person_id = christopher.id
 new_movie.save
 
 new_movie = Movie.new
 new_movie.title = "The Dark Knight Rises"
 new_movie.year_released = "2012"
 new_movie.rated = "PG-13"
-new_movie.director_id = director.id
+new_movie.person_id = christopher.id
 new_movie.save
 
 batman_begins = Movie.where({title: "Batman Begins"})[0]
@@ -273,7 +275,8 @@ all_movies = Movie.all
 all_people = Person.all
 
 for movie in all_movies
-    puts "#{movie.title} #{movie.year_released} #{movie.rated} #{movie.person.name}"
+    director = Person.where({id: movie.person_id})[0]
+    puts "#{movie.title} #{movie.year_released} #{movie.rated} #{director.name}"
 end
 
 # Prints a header for the cast output
@@ -289,7 +292,9 @@ puts ""
 all_roles = Role.all
 
 for role in all_roles
-    puts "#{role.movie.title} #{role.actor.name} #{role.character_name}"
+    film = Movie.where({id: role.movie_id})[0] 
+   actor = Person.where({id: role.person_id})[0]
+    puts "#{film.title} #{actor.name} #{role.character_name}"
 end
 
 
