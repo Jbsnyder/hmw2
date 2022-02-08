@@ -170,91 +170,91 @@ anne = Person.where({name: "Anne Hathaway"})[0]
 
 new_role = Role.new
 new_role.movie_id = batman_begins.id
-new_role.actor_id = christian.id
+new_role.person_id = christian.id
 new_role.character_name = "Bruce Wayne"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = batman_begins.id
-new_role.actor_id = michael.id
+new_role.person_id = michael.id
 new_role.character_name = "Alfred"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = batman_begins.id
-new_role.actor_id = liam.id
+new_role.person_id = liam.id
 new_role.character_name = "Raa's Al Ghul"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = batman_begins.id
-new_role.actor_id = katie.id
+new_role.person_id = katie.id
 new_role.character_name = "Rachel Dawes"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = batman_begins.id
-new_role.actor_id = gary.id
+new_role.person_id = gary.id
 new_role.character_name = "Commissioner Gordon"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = dark_knight.id
-new_role.actor_id = christian.id
+new_role.person_id = christian.id
 new_role.character_name = "Bruce Wayne"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = dark_knight.id
-new_role.actor_id = heath.id
+new_role.person_id = heath.id
 new_role.character_name = "Joker"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = dark_knight.id
-new_role.actor_id = aaron.id
+new_role.person_id = aaron.id
 new_role.character_name = "Harvey Dent"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = dark_knight.id
-new_role.actor_id = michael.id
+new_role.person_id = michael.id
 new_role.character_name = "Alfred"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = dark_knight.id
-new_role.actor_id = maggie.id
+new_role.person_id = maggie.id
 new_role.character_name = "Rachel Dawes"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = dark_knight_rises.id
-new_role.actor_id = christian.id
+new_role.person_id = christian.id
 new_role.character_name = "Bruce Wayne"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = dark_knight_rises.id
-new_role.actor_id = gary.id
+new_role.person_id = gary.id
 new_role.character_name = "Commissioner Gordon"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = dark_knight_rises.id
-new_role.actor_id = tom.id
+new_role.person_id = tom.id
 new_role.character_name = "Bane"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = dark_knight_rises.id
-new_role.actor_id = joseph.id
+new_role.person_id = joseph.id
 new_role.character_name = "John Blake"
 new_role.save
 
 new_role = Role.new
 new_role.movie_id = dark_knight_rises.id
-new_role.actor_id = anne.id
+new_role.person_id = anne.id
 new_role.character_name = "Selina Kyle"
 new_role.save
 
